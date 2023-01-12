@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import NewTask from "./components/NewTask";
+import Task from "./components/Task";
+import { useState } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faEnvelope,
+  faKey,
+  faListAlt,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faEnvelope, faKey, faListAlt);
 
 function App() {
+  const [task, setTask] = useState("");
+  const [tabTask, setTabTask] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {tabTask.map((element, index) => {
+        return <Task key={index} element={element} />;
+      })}
+      <NewTask
+        task={task}
+        setTask={setTask}
+        tabTask={tabTask}
+        setTabTask={setTabTask}
+      />
     </div>
   );
 }
