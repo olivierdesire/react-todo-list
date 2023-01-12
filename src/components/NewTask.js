@@ -1,6 +1,6 @@
 const NewTask = ({ task, setTask, tabTask, setTabTask }) => {
   return (
-    <div>
+    <div className="newtask">
       <input
         type="text"
         placeholder="new task"
@@ -13,7 +13,8 @@ const NewTask = ({ task, setTask, tabTask, setTabTask }) => {
         onClick={() => {
           if (task) {
             const copyTabTask = [...tabTask];
-            copyTabTask.push(task);
+            copyTabTask.push({ name: task, check: false });
+            // copyTabTask.push(task);
             setTabTask(copyTabTask);
             console.log(copyTabTask);
           }

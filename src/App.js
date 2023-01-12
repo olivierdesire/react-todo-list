@@ -8,8 +8,9 @@ import {
   faEnvelope,
   faKey,
   faListAlt,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faEnvelope, faKey, faListAlt);
+library.add(faEnvelope, faKey, faListAlt, faTrash);
 
 function App() {
   const [task, setTask] = useState("");
