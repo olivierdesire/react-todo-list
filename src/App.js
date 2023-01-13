@@ -20,7 +20,15 @@ function App() {
     <div className="App">
       <Header />
       {tabTask.map((element, index) => {
-        return <Task key={index} element={element} />;
+        return (
+          <Task
+            key={index}
+            index={index}
+            element={element}
+            tabTask={tabTask}
+            setTabTask={setTabTask}
+          />
+        );
       })}
       <NewTask
         task={task}

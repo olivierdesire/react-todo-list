@@ -10,6 +10,7 @@ const NewTask = ({ task, setTask, tabTask, setTabTask }) => {
         }}
       />
       <div
+        className="add-task"
         onClick={() => {
           if (task) {
             const copyTabTask = [...tabTask];
