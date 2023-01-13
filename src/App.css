@@ -66,3 +66,13 @@ h1 {
 .trash {
   margin-top: 5px;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+footer span {
+  font-weight: bold;
+}

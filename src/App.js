@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import NewTask from "./components/NewTask";
 import Task from "./components/Task";
+import Footer from "./components/Footer";
 import { useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -36,6 +37,7 @@ function App() {
         tabTask={tabTask}
         setTabTask={setTabTask}
       />
+      <Footer />
     </div>
   );
 }
